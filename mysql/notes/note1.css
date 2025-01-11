@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+    color:white;
+}
+p {
+    color: silver;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+i {
+    font-family:'Courier New', Courier, monospace;
+    font-weight: lighter;
+    color:aqua;
+}

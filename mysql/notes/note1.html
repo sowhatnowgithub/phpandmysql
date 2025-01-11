@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The History League</title>
+        <meta http-equiv="author"
+        content="sai" >
+        <meta name="keywords"
+        content="sql, table" >
+        <link href="note1.css" type="text/css" rel="stylesheet" >
+    </head>
+    <body>
+        <h1>MySQL</h1>
+        <blockquote>
+            <p>This is a opensource software, that does Relation Data Base Management System(RDBMS)</p>
+        </blockquote>
+        <h1>sql</h1>
+        <blockquote>
+            <p>This is the programing language that is used to create and operate CRUD operation on database</p>
+        </blockquote>
+        <h2>Entering Client Program via <i>mysql</i></h2>
+        <p>Command: <i>mysql -p -u user_name</i></p>
+        or
+        <p>Command: <i>mysql -h host_name -p -u username</i> - This is if the host is not a local host</p>
+        or
+        <p>Command: <i>mysql --host=host_name -p --user=user_name</i> - Another way to log in to client program</p>
+        or 
+        <p>Command: <i>mysql -h host_name -p -u user_name database_name</i> - Log directly into a database</p>
+        <p>You will enter the Client program offered by <i>mysql</i></p>
+        <h2>Creating User</h2>
+        <p>Command: <i>CREATE USER 'user_name'@'host_name' IDENTIFIED BY 'password'</i></p>
+        <h2>Grant access over a database to user</h2>
+        <p>Command: <i>GRANT ALL ON database_name.* TO 'user_name'@'localhost'</i></p>
+        <p>This gives permission to the user_name over the database database_name</p>
+        <p><b>Note</b>: Even if the database is not created yet, the <i>grant</i> will not create the database but later on if created it gives permission</p>
+        <h2>Use Select</h2>
+        <p>Command: <i>SELECT NOW();</i> - GIves Time</p>
+        <p>Command: <i>SELECT USER();</i> - Gives the user that logged in</p>
+        <p>COmmand: <i>SELECT VERSION();</i> - Version of mysql</p>
+        <p>Command: <i>SELECT DATABASE();</i> - This gives the database in use, if no database is not selected then NULL will be returned</p>
+        <h2>Create Databae</h2>
+        <p>Command: <i>CREATE DATABASE database_name</i> - THis is the database owned by the user by which the client program is accessed</p>
+        <p>The database in the same system shouldn't have same name</p>
+        <h2>Use Database</h2>
+        <p>Command: <i>USE database_name</i> - You can now affect the database</p>
+        <p>Command: <i>SELECT DATABASE();</i> - This will show which database is in use, if no database then it returns NULL </p>
+        <h2>Useful escape characters not for text</h2>
+        <p>Command: <i>\c</i> - this when eneterd clears the present command</p>
+        <p>Command: <i>\g</i> - this can be used inplace of semi-colon to end the command</p>
+        <p>Command: <i>\G</i> - This is also like a semi-colon but the output will be inverted</p>
+        <h2>CREATING A TABLE</h2>
+        <p>To ensure that we have proper and useful data inputs for the database we have to plan before on what we plan to insert into our table</p>
+        <p>What is the datatype of the input information, ease of use for the future case</p>
+        <p>For Example: If we have to take name of a customer, its lot better to take the name in one column, but its useful to store the name in three columns,</p>
+        <p>First name (including the middle name), last name and Suffix</p>
+        <p>Command: <i>CREATE TABLE table_name</i></p>
+    </body> 
+
+</html>
