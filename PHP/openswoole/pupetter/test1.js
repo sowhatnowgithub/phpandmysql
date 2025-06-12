@@ -16,7 +16,7 @@ const browser = await puppeteer.launch({
 	await timeDelay(30);
 	await selectInput.click();
 	await timeDelay(10);
-	await selectInput.fill('jeans');
+	await selectInput.fill('Pattu Chira saree green peacock design Kerala traditional');
 	await timeDelay(20);
 	await Promise.all([
 		page.keyboard.press('Enter'),
