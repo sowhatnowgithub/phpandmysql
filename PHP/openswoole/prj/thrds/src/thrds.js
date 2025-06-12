@@ -85,13 +85,15 @@ class webSocketManager {
 					var messageFormat = `${data['userName']} : ${data['message']} </p><p class="message-date">${date}</p>`;
 					if(thrdFind) {
 						const messagePanel = thrdFind.querySelector('.broadcasted-messages');
+				messagePanel.querySelector('.broadcasted-message-server')?.parentNode?.insertBefore(messageDiv, 
+					messagePanel.querySelector('.broadcasted-message-server') ) || 
+						messagePanel.appendChild(messageDiv);
+
 						if(userName === userSetName) {
 							messageFormat = `<p style="color: red" class="message-text">${messageFormat}`;
-							messagePanel.appendChild(messageDiv);
 							messageDiv.innerHTML = messageFormat;
 						} else {
 							messageFormat = `<p class="message-text">${messageFormat}`;
-							messagePanel.appendChild(messageDiv);
 							messageDiv.innerHTML = messageFormat;
 						}
 					
@@ -167,7 +169,7 @@ function createBroadcastMessage(message, thrdId, userName){
 	}
 }
 
-var userSetName = "";
+var userSetName = `Anonymous-${Math.floor((Math.random()*10000)+100)}`;
 document.querySelector('.user-name-input #set-user button').addEventListener('click',(e)=>{
 	e.preventDefault();
 	userSetName = document.querySelector('.set-username')?.value;

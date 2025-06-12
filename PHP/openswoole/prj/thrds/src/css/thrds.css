@@ -95,15 +95,9 @@ input[type="text"]{
 }
 .thrd-area .close-thrd {
 	position: absolute;
-	bottom: 3px;
+	top: 35px;
 	right: 3px; 
 }
-.thrd-area .close-thrd-btn {
-	position: absolute;
-	bottom: 10px;
-	right: 3px; 
-}
-
 .thrd-area .close-thrd-btn:hover {
 	background-color: red;	
 	color: black;
@@ -118,6 +112,7 @@ input[type="text"]{
 	border-radius: 5px;
 	z-index: 1000;
 	cursor: default;
+	overflow-y: scroll;
 }
 .thrd-area.thrd-selected .messageArea {
 	display: block;
