@@ -11,6 +11,7 @@ $server->on ("Start", function(Server $server){
 
 $server->on("Request",function(Request $request, Response $response){
 	$response->header("Content-Type","text/plain");
+	$response->send("<h1>Hello World</h1>");
 	$response->end("Hello World");
 });
 

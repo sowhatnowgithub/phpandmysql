@@ -1,0 +1,31 @@
+**/node_modules/
+
+# Ignore build output in React subprojects (e.g., created by `npm run build`)
+**/build/
+
+# Log files
+*.log
+
+# Environment files (e.g., for API keys, credentials)
+.env
+
+# Operating system files (macOS, Windows, etc.)
+.DS_Store
+Thumbs.db
+
+# npm debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Optional: Ignore package-lock.json or yarn.lock if you don't want to commit them
+# package-lock.json
+# yarn.lock
+
+# Ignore all test coverage reports
+coverage/
+
